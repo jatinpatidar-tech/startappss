@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+<style>
+
+.box {
+  background: lightblue;
+  border: 2px solid blue;
+  margin: 10px;
+  padding: 10px;
+}
+.inline {
+
+  display: inline;
+  width: 250px;      /* not work  */
+  height: 50px;      /* its not work */
+}
+
+
+.inline-block {
+  display: inline-block;
+  width: 200px;    
+  height: 50px;      /*work */
+}
+
+/* Block */
+.block {
+  display: block;
+  width: 150px;     
+  height: 50px;      /* its work */
+}
+</style>
+</head>
+
+<body>
+
+<h2>Inline element</h2>
+<span class="box inline">Inline 1</span>
+<span class="box inline">Inline2</span>
+
+<h2>Inline-Block element</h2>
+<span class="box inline-block">Inline-Block1</span>
+<span class="box inline-block">Inline-Block 2</span>
+
+<h2>Block Element</h2>
+<div class="box block">Blcok 1</div>
+<div class="box block">Block 2</div>
+
+</body>
+</html>

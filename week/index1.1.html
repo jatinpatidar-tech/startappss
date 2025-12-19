@@ -1,0 +1,149 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1 style="color: blue ; border: 2px solid #b64b4b ; padding : 10px ; margin: 30px ">startappss</h1>
+    <h4> font size</h4>
+    <h1 style="font-size: large ;color: rgb(64, 64, 146) ; ">startappss</h1>
+    <h1 style="font-size: medium;color: blue ; ">startappss</h1>
+    <h1 style="font-size: small; color: blue ; ">startappss</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0vxX7Ad2wlnMLvz3phmblj3KRVEv9VZEfxA&s" alt="">
+  
+    <hr> 
+    <nav  style=" color : red ; border: 4 px solid red  ">
+        <a href="">home</a>    <a href="">about</a>  <a href="">profile</a>     <a href=""> contactUs</a>
+    </nav>
+
+    
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Box Model Demo</title>
+  <style>
+   
+    * {
+      box-sizing: border-box; 
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f6f8;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+ 
+    .container {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+
+    .box {
+      width: 250px;             
+      background-color: #ffffff;
+
+      border: 5px solid #4f46e5;
+      margin: 20px;             
+
+      border-radius: 12px;      
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+
+      transition: transform 0.3s ease; 
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+    }
+
+  
+    .box h2 {
+      margin-top: 0;
+      color: #4f46e5;
+    }
+
+    .box p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+
+    .overflow-box {
+      height: 150px;     
+      overflow: auto;   
+    }
+
+    .label {
+      display: inline-block;
+      background: #4f46e5;
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Box Model (Content, Padding, Border, Margin)</h1>
+
+  <div class="container">
+
+
+
+    <div class="box">
+      <span class="label">Normal Box</span>
+      <h2>Content Area</h2>
+      <p>
+        Ye box CSS Box Model ko show karta hai.
+        Isme <b>content</b>, <b>padding</b>, <b>border</b>, aur <b>margin</b>
+        sab use hue hain.
+      </p>
+    </div>
+
+  
+    <div class="box overflow-box">
+      <span class="label">Overflow Example</span>
+      <h2>Overflow</h2>
+      <p>
+        Jab content zyada hota hai aur box ki height fix hoti hai,
+        to <b>overflow</b> ka use hota hai. Is example me
+        <b>overflow: auto</b> lagaya gaya hai.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Repellendus, accusantium, porro, modi deserunt dolorem
+        saepe quaerat laborum illum maiores.
+      </p>
+    </div>
+
+
+    <div class="box">
+      <span class="label">Box-Sizing</span>
+      <h2>box-sizing</h2>
+      <p>
+        Yaha <b>box-sizing: border-box</b> use hua hai,
+        jisse width ke andar hi padding aur border count ho jate hain.
+        Ye real projects me bahut important hota hai.
+      </p>
+    </div>
+
+  </div>
+
+</body>
+</html>

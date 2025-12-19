@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      label {
+        font-weight: bold;
+        height: 3rem;
+        width: 1em;
+        /* display: block; */
+      }
+      form {                        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 50%;
+        width: 25%;
+        /* align-self: center; */
+        /* border: 8px solid rgb(50, 48, 48); */
+        /* border-radius: 15px; */
+        background: #ffffff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+      body {
+        font-family: Arial;
+        /* border: 4px solid red; */
+        background: #f5b649;
+
+        height: 45rem;
+        /* width:30rem; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      input,
+      textarea {
+        width: 90%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      textarea,
+      input {
+        /* border-radius: 8px; */
+        background-color: rgb(255, 255, 255);
+      }
+      #submit {
+        width: 90%;
+        height: 5rem;
+        border: #ff7c1e;
+        background: #ff7c1e;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+        
+    <form action="">
+    
+      <label for="name">Frist Name</label>
+      <input
+        type="text"
+        id="name"
+        placeholder="Enter your Frist Name "
+        type="text"
+        name="name"
+        required
+        pattern="[A-Za-z ]{3,}"
+        title="Name must contain at least 3 letters and only alphabets"
+      />
+
+      <label for="email">Email</label>
+      <input
+        placeholder="Enter your email "
+        type="email"
+        id="email"
+        name="email"
+        required
+        pattern="[a-z0-9]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        title="Enter a valid email address (example: user@gmail.com)"
+      />
+      <label for="phone">Phone Number</label>
+
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        required
+        placeholder="Enter your phone no"
+        pattern="[6-9][0-9]{9}"
+        title="Enter a valid 10-digit Indian phone number"
+      />
+
+      <label for="message">Message</label>
+      <textarea
+        placeholder=" Enter your message"
+        id="message"
+        name="message"
+        rows="4"
+        required
+        title="Message cannot be Empty"
+      ></textarea>
+
+      <button type="submit" id="submit">submit</button>
+    </form>
+
+  </body>
+</html>

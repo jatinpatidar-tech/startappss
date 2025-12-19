@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>theme changer</title>
+
+<style>
+
+:root {
+  --bgcolor: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f2f2f2;
+}
+
+#theme-toggle:checked ~ .page {
+  --bgcolor: #121212;
+  --text-color: #ffffff;
+  --card-bg: #1e1e1e;
+}
+.page {
+  background: var(--bgcolor);
+  color: var(--text-color);
+  min-height: 100vh;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+#theme-toggle {
+  display: none;
+}
+</style>
+</head>
+
+<body>
+
+<label for="theme-toggle">🌙 Dark Mode</label>
+<input type="checkbox" id="theme-toggle">
+ <!-- <input type="checkbox" name="" id="theme-toggle"> -->
+<div class="page">
+  <h1>Hello Theme Switch</h1>
+  <div class="card">
+    This is a CSS-only dark/light theme switch.
+  </div>
+</div>
+
+</body>
+</html>
+

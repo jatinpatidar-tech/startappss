@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About</title>
+ <link rel="stylesheet" href="navbar.css">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.5;
+}
+
+.navbar {
+    background-color: #2c3e50;
+    padding: 12px 0;
+    border-bottom: 3px solid #e74c3c;
+}
+
+.navbar a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 18px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+
+.navbar a:hover {
+    color: #e74c3c;
+}
+
+.main-content {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 25px;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.about-header h1 {
+    font-size: 2.8em;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-weight: normal;
+}
+
+.about-header .subtitle {
+    color: #7f8c8d;
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+.bio-section {
+    background: white;
+    padding: 35px;
+    margin: 25px 0;
+    border-left: 4px solid #e74c3c;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.bio-section h2 {
+    color: #34495e;
+    font-size: 1.4em;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #90def2;
+    padding-bottom: 8px;
+}
+
+.bio-section p {
+    margin-bottom: 15px;
+    text-align: justify;
+    font-size: 15px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.skill-tag {
+    background-color: #3498db;
+    color: rgb(200, 157, 157);
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+@media (max-width: 768px) {
+    .navbar a { margin: 0 10px; font-size: 12px; }
+    .main-content { padding: 0 15px; margin: 30px auto; }
+    .about-header h1 { font-size: 2.2em; }
+    .bio-section { padding: 25px 20px; }
+}
+</style>
+</head>
+
+<body>
+
+
+ 
+    <nav class="navbar">
+        <div style="text-align: center;">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="filmography.html">Filmography</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+    <div class="main-content">
+        <div class="about-header">
+            <h1>About Me</h1>
+            <p class="subtitle">Artist • Performer • Creative Professional</p>
+        </div>
+        
+        <div class="bio-section">
+            <h2>My Journey</h2>
+            <p>Welcome to my creative world. I'm an artist with over 8 years of experience in television, film, and theater. My passion lies in bringing characters to life and connecting with audiences through authentic storytelling.</p>
+            
+            <p>From my early days performing in local theater productions to working on major television series, each project has shaped my understanding of the craft. I believe in the power of collaboration and the magic that happens when creative minds come together.</p>
+        </div>
+        
+        <div class="bio-section">
+            <h2>What I Do</h2>
+            <p>My work spans across multiple mediums, allowing me to explore different facets of performance and creativity. Whether it's embodying a complex character on screen or captivating a live audience on stage, I approach each role with dedication and authenticity.</p>
+            
+            <div class="skills-list">
+                <span class="skill-tag">Television</span>
+                <span class="skill-tag">Film</span>
+                <span class="skill-tag">Theater</span>
+                <span class="skill-tag">Voice Acting</span>
+                <span class="skill-tag">Commercial Work</span>
+            </div>
+        </div>
+        
+        <div class="bio-section">
+            <h2>My Approach</h2>
+            <p>I believe every project is an opportunity to learn something new. My approach combines classical training with contemporary techniques, always staying curious and open to growth. Collaboration, preparation, and genuine passion are the cornerstones of my work.</p>
+        </div>
+    </div>
+
+</body>
+</html>

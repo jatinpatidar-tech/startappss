@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+   input{
+      border-radius: 8px;
+   }
+  .container{
+    /* border: 2px solid black; */
+    border-radius: 20px;
+    display: inline-block;
+    padding: 15px;
+    margin: 0 10px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.6);
+  }
+  
+  .heading{ 
+    text-align: center;
+    background-color: rgb(43, 43, 93);
+    color: rgb(237, 199, 199);
+    padding: 10px;
+    /* margin-bottom: 10px; */
+    border-radius: 8px;
+     box-shadow: 0 8px 15px rgba(100, 98, 98, 0.6);
+  }
+  body{
+    background-color: rgb(174, 180, 178);
+  }
+</style>
+<body style="display: flex; flex-direction: row; justify-content: center; align-items: center; min-height: 100vh;">
+      <div class="container" > <h1 class="heading">
+        Support
+      </h1>
+       <form action="" style="padding: 10px;">
+       
+
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="fullname" placeholder=" enter your  name" required>
+        <br><br>
+        
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="email" required>
+        <br><br>
+
+        
+
+        <label>Gender</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <br><br>
+         
+      <label for="country">Country:</label>
+     <select id="country" name="country">
+      <option value="in"   selected>India</option>
+      <option value="us">USA</option>
+      <option value="uk">UK</option>
+      </select>
+ 
+       <!-- <select name="" id="">
+       <option >jatin</option>
+       <option value="">disha</option>
+       <option value=""  selected>aditya</option>
+       </select> -->
+       <br>
+    <button type="submit">submit </button>
+    </form>
+    </div>
+
+    <div class="container">
+        <h1 class="heading">Recuritment</h1>
+       <form action="" style="padding: 10px;">
+       
+
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="fullname" placeholder=" enter your  name" required>
+        <br><br>
+        
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="email" required>
+      
+        <br>
+        <label for="email">Position:</label>
+
+        <input type="text" id="pos" name="psostion" placeholder="Position" required>
+        <br><br>
+
+        
+
+        <label>Gender</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+
+       
+        
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <br><br>
+         
+      <label for="country">Country:</label>
+     <select id="country" name="country">
+      <option value="in"   selected>India</option>
+      <option value="us">USA</option>
+      <option value="uk">UK</option>
+      </select>
+ 
+       <!-- <select name="" id="">
+       <option >jatin</option>
+       <option value="">disha</option>
+       <option value=""  selected>aditya</option>
+       </select> -->
+       <br>
+    <button type="submit">submit </button>
+    </form>
+</div>
+</body>
+</html>
