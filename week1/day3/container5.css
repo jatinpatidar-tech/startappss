@@ -1,0 +1,91 @@
+
+/* MAIN SECTION */
+.section {
+  background: #6f4cff;
+  padding: 4rem 2rem;
+}
+
+/* FLEX CONTAINER */
+.section-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* LEFT SIDE */
+.left {
+  width: 50%;
+  color: #fff;
+}
+
+.left h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.sub-text {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* FORM */
+form {
+  margin-bottom: 1.5rem;
+}
+
+form input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 0.6rem;
+  border-radius: 6px;
+  border: none;
+}
+
+form button {
+  width: 100%;
+  padding: 0.9rem;
+  background: #ffcc00;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* POINTS */
+.points {
+  list-style: none;
+}
+
+.points li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* RIGHT SIDE */
+.right {
+  width: 45%;
+}
+
+.right img {
+  width: 100%;
+  height: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .section-inner {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .right {
+    margin-top: 2rem;
+  }
+}

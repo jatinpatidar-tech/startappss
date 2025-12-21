@@ -1,43 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Navbar Example</title>
-<style>
-   
-  
- .navbar{
-   display: flex;
-   flex-direction: row;
-   justify-content: space-around;
-   display: inline-block;
-   border: 2px solid red;
-   
- }
-  
- .list{
-  display: flex;
-   flex-direction: row;
-    justify-content: space-around;
- }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar Example</title>
+    <link rel="stylesheet" href="container3.css" />
+    <link rel="stylesheet" href="container5.css" />
+    <link rel="stylesheet" href="container4.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        /* box-sizing: border-box; */
+      }
+      .navbar {
+        /* border-radius: 1rem; */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        /* display: inline-block; */
+        border: 2px solid rgb(103, 12, 12);
+        width: 100vw;
+        height: 3rem;
+        background-color: #6f3dff;
+        color: white;
+      }
+      #sidebar {
+        display: none;
+      }
 
-</style>
-</head>
-<body>
+      .list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 50rem;
+        /* border: 2px solid black; */
+      }
 
-  <h2 class="navbar">All the best</h2>
-<div class="navbar">
-  <ul class="list">
-  <li><a href="#">About us</a></li>
-  <li><a href="#">Learning format</a></li>
-  <li><a href="#">Reviews</a></li>
-  <li><a href="#">Price / Cost</a></li>
-  <li><a href="#">Contact</a></li>
- 
-</ul>
-</div>
-<div class="navbar"><a href="#" class="phone">+7 909 878-99-99</a></div>
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      .logo {
+        color: #fcca00;
+      }
 
-</body>
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        /* padding: 2rem; */
+        margin: 2rem;
+        border-radius: 1rem;
+        border: 4px solid rgb(114, 72, 72);
+        background: linear-gradient(
+          to right,
+          rgb(74, 62, 203),
+          rgb(62, 61, 118)
+        );
+        height: calc(100vh - 60px);
+      }
+      #men-img {
+        height: 100%;
+        width: 50%;
+        /* border: 4px solid rgb(31, 31, 237); */
+      }
+      #men {
+        height: 100%;
+        width: 100%;
+        /* border: 4px solid green; */
+        object-fit: cover;
+      }
+
+      #men-text {
+        width: 50%;
+        padding-right: 2rem;
+        padding-left: 2rem;
+      }
+
+      #men-text h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #ffffff;
+      }
+
+      #men-text p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #ffffff;
+      }
+      .container2 {
+        margin: 2rem;
+        /* padding: 2rem; */
+        height: 30rem;
+        border: 4px solid rgb(172, 65, 65);
+        border-radius: 1rem;
+        /* background-color: rgb(193, 239, 243); */
+      }
+      .container2-img {
+        width: 100%;
+        display: flex;
+        height: 50%;
+        border-radius: 8rem;
+        /* border:  2px solid rgb(244, 120, 120); */
+      }
+      .container2-img div {
+        width: 25%;
+        padding: 1rem;
+      }
+
+      @media (max-width: 286px) {
+        .navbar {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          /* display: inline-block; */
+          border: 2px solid red;
+          width: 100vw;
+          background-color: #6f3dff;
+        }
+        .list {
+          /* align-items: center; */
+          display: none;
+        }
+        #sidebar {
+          align-items: center;
+          display: block;
+          border: 4px solid red;
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+      .container2-img1 {
+        border-radius: 3rem;
+        /* border: 3px solid black; */
+        height: 100%;
+        width: 70%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <h2 class="logo">All the best</h2>
+      <div class="list">
+        <a href="#">About us</a>
+        <a href="#">Learning format</a>
+        <a href="#">Reviews</a>
+        <a href="#">Price / Cost</a>
+        <a href="#">Contact</a>
+        <a href="#" class="phone">+7 909 878-99-99</a>
+      </div>
+      <a href="#"><img src="./images/sidebar.png" id="sidebar" alt="Menu" /></a>
+    </div>
+
+    <div class="container">
+      <div id="men-text">
+        <h1>Math tutor for <br />grades 5-11</h1>
+        <p>
+          → Prepares for OGE and EGE exams, helps improve performance, and
+          strengthens school knowledge according to an individual plan.
+        </p>
+        <h1
+          style="
+            background-color: #fcca00;
+            margin-left: 4rem;
+            border-radius: 1rem;
+            padding: 0.5rem 1rem;
+            font-size: 100%;
+            border: 2px solid red;
+            display: inline-block;
+          "
+        >
+          Sign up for a trial lesson
+        </h1>
+      </div>
+      <div id="men-img">
+        <img id="men" src="./images/men.png" alt="Math tutor portrait" />
+      </div>
+    </div>
+
+    <!-- container2 -->
+    <div class="container2">
+      <div>
+        <h1>Why choose us</h1>
+      </div>
+      <div>
+        <h1>>1200 students</h1>
+        <p>were satisfied with our tutors</p>
+      </div>
+      <div class="container2-img">
+        <div>
+          <img
+            class="container2-img1"
+            src="images/Screenshot 2025-12-19 163248.png"
+            alt=""
+          />
+          <h2>Only the best teachers</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, magni!
+          </p>
+        </div>
+        <div>
+          <img
+            class="container2-img1"
+            src="images/Screenshot 2025-12-19 163311.png"
+            alt=""
+          />
+          <h2>Individual lesson program</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, magni!
+          </p>
+        </div>
+        <div>
+          <img
+            class="container2-img1"
+            src="images/Screenshot 2025-12-19 163402.png"
+            alt=""
+          />
+          <h2>Flexible class schedule</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, magni!
+          </p>
+        </div>
+        <div>
+          <img
+            class="container2-img1"
+            src="images/Screenshot 2025-12-19 163419.png"
+            alt=""
+          />
+          <h2>System control</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, magni!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- container3 -->
+    <h1 style="border: 2px solid red; padding-left: 3%">
+      How our classes work
+    </h1>
+    <div class="container3">
+      <div class="container3-text container3-1">
+        <div class="c3-text">
+          <h3>A teacher and a student use the Online</h3>
+          <h2>Whiteboard during a lesson.</h2>
+        </div>
+        <div class="c3-text">
+          <h2>The teacher teaches lessons to 2-3 students at a time.</h2>
+        </div>
+        <div class="c3-text">
+          <h2>Students don't see each other and</h2>
+          <h3>don't have any contact with each other.</h3>
+        </div>
+        <div class="c3-text">
+          <h2>The lesson is held individually,</h2>
+          <h3>
+            not in a group: while one person is solving problems, we discuss the
+            theory and methods
+          </h3>
+        </div>
+      </div>
+      <div class="container3-1">
+        <img height="" width="100%" src="images/laptop.png" alt="" />
+      </div>
+    </div>
+
+    
+    <!-- <div class="container4">
+      <div class="container4-box">
+        <h1>Lesson duration up to 90 minutes</h1>
+        <p>This way, each student has time to complete their homework, learn a new topic, and consolidate theory into practice</p>
+      </div>
+      <div class="container4-box">
+        <h1> 80% of the lesson
+         let's look at it in practice</h1>
+        <p>This approach is the most productive, as your child will learn to solve problems independently, and not just write down solutions as dictated by the teacher.</p>
+      </div>
+    </div>
+  -->
+  <!-- container4 -->
+
+
+<section class="info-section">
+  <div class="info-box">
+    <span class="badge">up to 90 min. lesson duration</span>
+    <p>
+     This way, each student has time to review their homework, learn a new topic, and consolidate theory into practice.
+    </p>
+  </div>
+
+  <div class="info-box">
+    <span class="badge">80% of the lesson is covered in practice.</span>
+    <p>
+  This approach is the most productive, as your child will learn to solve problems independently, and not just write down the solution as dictated by the teacher.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+
+    <!-- LEFT SIDE -->
+    <div class="left">
+      <h1>Start learning today!</h1>
+      <p class="sub-text">Leave a request and get a free lesson</p>
+
+      <form>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <input type="text" placeholder="Phone">
+        <button type="submit">Submit Request</button>
+      </form>
+
+      <ul class="points">
+        <li>✔ Lessons up to 90 minutes</li>
+        <li>✔ Individual approach</li>
+        <li>✔ 80% practice in each lesson</li>
+        <li>✔ Teacher support</li>
+      </ul>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+      <img src="https://i.imgur.com/0y0y0y0.png" alt="Teacher Image">
+    </div>
+
+  </div>
+</section>
+  </body>
 </html>
