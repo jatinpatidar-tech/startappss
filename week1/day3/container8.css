@@ -1,0 +1,79 @@
+.container8{
+  padding: 3rem 2rem;
+  background: #f9fbff;
+}
+
+.container8-title{
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+
+.container8-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+
+.price-card{
+  background: #fff;
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.price-card h3{
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.price-card p{
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.muted{
+  color: #666;
+  font-size: 0.9rem;
+}
+
+
+.btn{
+  margin-top: 1.2rem;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+.yellow{
+  box-shadow: #fdd33c 10px 10px 8px;
+
+  background: #fff8dc;
+}
+
+.yellow-btn{
+  background: #ffc400;
+}
+
+.purple{
+  box-shadow: #4f3cfd 10px 10px 8px;
+
+  background: #f1ecff;
+}
+
+.purple-btn{
+  background: #6c4cff;
+  color: white;
+}
+
+/* responsive */
+@media (max-width: 768px){
+  .container8-grid{
+    grid-template-columns: 1fr;
+  }
+}

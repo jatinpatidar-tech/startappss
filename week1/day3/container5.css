@@ -1,12 +1,16 @@
 
-/* MAIN SECTION */
+
 .section {
+  /* border: 4px solid #ffcc00; */
   background: #6f4cff;
-  padding: 4rem 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
-/* FLEX CONTAINER */
+
 .section-inner {
+  /* border: 4px solid #ff11db; */
+  /* border-radius: 1rem; */
   max-width: 1200px;
   margin: auto;
   display: flex;
@@ -15,8 +19,11 @@
   flex-wrap: wrap;
 }
 
-/* LEFT SIDE */
+
 .left {
+  /* border: 4px solid #10e76a; */
+ display: flex;
+  flex-direction: row;
   width: 50%;
   color: #fff;
 }
@@ -31,7 +38,7 @@
   font-size: 1rem;
 }
 
-/* FORM */
+
 form {
   margin-bottom: 1.5rem;
 }
@@ -43,7 +50,15 @@ form input {
   border-radius: 6px;
   border: none;
 }
-
+.additional-text{
+  margin: 10px;
+  padding: 20px;
+  /* border: #0e0e0d 2px solid; */
+  display: flex;
+   flex-direction: column;
+   width: 100%;
+   justify-content: space-around;
+}
 form button {
   width: 100%;
   padding: 0.9rem;
@@ -54,7 +69,13 @@ form button {
   cursor: pointer;
 }
 
-/* POINTS */
+.container5-text {
+
+ 
+  /* border: 2px solid #0c22e9; */
+  /* margin-top: 1.5rem; */
+  /* font-size: 1rem; */
+}
 .points {
   list-style: none;
 }
@@ -64,22 +85,35 @@ form button {
   font-size: 0.95rem;
 }
 
-/* RIGHT SIDE */
+
 .right {
+  /* border: 4px solid #ffcc00; */
   width: 45%;
+  /* height: 100%; */
 }
 
 .right img {
+  /* position: absolute; */
+  /* top: 2rem; */
+  /* margin-top: 100px; */
   width: 100%;
+  object-fit: cover;
   height: auto;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 768px) {
   .section-inner {
     flex-direction: column;
   }
+   
+.left {
 
+
+  flex-direction: column;
+ 
+ 
+}
   .left,
   .right {
     width: 100%;
@@ -89,3 +123,5 @@ form button {
     margin-top: 2rem;
   }
 }
+
+
