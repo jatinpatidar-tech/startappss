@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="green">green</button>
+    <button id="orange">orange</button>
+
+<script>
+    const greenBtn=document.getElementById("green");
+    const orangeBtn=document.getElementById("orange");
+
+
+         function changetheme(color){
+            document.body.style.backgroundColor=color;
+         }
+
+    orangeBtn.addEventListener("click",(params)=> {
+         changetheme("orange");
+    })
+
+    greenBtn.addEventListener("click",(params)=> {
+         changetheme("green");
+    });
+
+   
+
+ 
+</script>
+</body>
+</html>
