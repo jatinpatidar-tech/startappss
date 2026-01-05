@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="calculator">
+    <input type="text" class="display" placeholder="0" disabled>
+
+    <div class="buttons">
+      <button id="value">C</button>
+      <button id="value">/</button>
+      <button id="value">*</button>
+      <button id="value">←</button>
+
+      <button id="value">7</button>
+      <button id="value">8</button>
+      <button id="value">9</button>
+      <button id="value">-</button>
+      <button id="value" >4</button>
+      <button id="value">5</button>
+      <button id="value">6</button>
+      <button id="value">+</button>
+      <button id="value">1</button>
+      <button id="value">2</button>
+      <button id="value">3</button>
+      <button id="value">=</button>
+      <button  id="value">0</button>
+      <button id="value">.</button>
+    </div>
+  </div>
+  <script>
+const display = document.getElementById("display");
+const buttons = document.querySelectorAll("button");
+
+let firstNumber = null;
+let operator = null;
+let shouldReset = false;
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const value = btn.textContent;
+
+    switch (value) {
+      case "C":
+        display.value = "";
+        firstNumber = null;
+        operator = null;
+        break;
+
+      case "+":
+      case "-":
+      case "*":
+      case "/":
+        if (display.value === "") return;
+        firstNumber = Number(display.value);
+        operator = value;
+        shouldReset = true;
+        break;
+
+      case "=":
+        if (operator === null || display.value === "") return;
+
+        const secondNumber = Number(display.value);
+        let result;
+
+        switch (operator) {
+          case "+":
+            result = add(firstNumber, secondNumber);
+            break;
+          case "-":
+            result = subtract(firstNumber, secondNumber);
+            break;
+          case "*":
+            result = multiply(firstNumber, secondNumber);
+            break;
+          case "/":
+            result = divide(firstNumber, secondNumber);
+            if (result === null) return; // divide by 0 ignore
+            break;
+        }
+
+        display.value = result;
+        operator = null;
+        break;
+
+      default: // numbers
+        if (shouldReset) {
+          display.value = value;
+          shouldReset = false;
+        } else {
+          display.value += value;
+        }
+    }
+  });
+});
+
+    
+  </script>
+</body>
+</html>
