@@ -12,40 +12,45 @@
     <input type="text" class="display" placeholder="0" disabled>
 
     <div class="buttons">
-      <button id="value">C</button>
-      <button id="value">/</button>
-      <button id="value">*</button>
-      <button id="value">←</button>
-
-      <button id="value">7</button>
-      <button id="value">8</button>
-      <button id="value">9</button>
-      <button id="value">-</button>
-      <button id="value" >4</button>
-      <button id="value">5</button>
-      <button id="value">6</button>
-      <button id="value">+</button>
-      <button id="value">1</button>
-      <button id="value">2</button>
-      <button id="value">3</button>
-      <button id="value">=</button>
-      <button  id="value">0</button>
-      <button id="value">.</button>
+      <button class="button">C</button>
+      <button class="button">/</button>
+      <button class="button">*</button>
+       <button class="button">←</button>
+      <button class="button">7</button>
+      <button class="button">8</button>
+          <button class="button">9</button>
+      <button class="button">-</button>
+      <button class="button" >4</button>
+      <button class="button">5</button>
+        <button class="button">6</button>
+       <button class="button">+</button>
+      <button class="button">1</button>
+      <button class="button">2</button>
+      <button class="button">3</button>
+      <button class="button equal">=</button>
+      <button class="button zero">0</button>
+      <button class="button">.</button>
     </div>
   </div>
   <script>
-const display = document.getElementById("display");
-const buttons = document.querySelectorAll("button");
+
+const display = document.querySelector(".display");
+const buttons = document.querySelectorAll(".button");
 
 let firstNumber = null;
 let operator = null;
 let shouldReset = false;
 
+function add(a,b){  return a+b; }
+function subtract(a,b){ return a-b; }
+function multiply(a,b){ return a*b; }
+function divide(a,b){ return b===0 ? display.value = "Error" : a/b; }
+
 buttons.forEach(btn => {
   btn.addEventListener("click", () => {
-    const value = btn.textContent;
+    const button = btn.textContent;
 
-    switch (value) {
+    switch(button){
       case "C":
         display.value = "";
         firstNumber = null;
@@ -56,31 +61,24 @@ buttons.forEach(btn => {
       case "-":
       case "*":
       case "/":
-        if (display.value === "") return;
+        if(display.value === "") return;
         firstNumber = Number(display.value);
-        operator = value;
+        operator = button;
         shouldReset = true;
         break;
 
       case "=":
-        if (operator === null || display.value === "") return;
-
+        if(operator===null || display.value==="") return;
         const secondNumber = Number(display.value);
         let result;
 
-        switch (operator) {
-          case "+":
-            result = add(firstNumber, secondNumber);
-            break;
-          case "-":
-            result = subtract(firstNumber, secondNumber);
-            break;
-          case "*":
-            result = multiply(firstNumber, secondNumber);
-            break;
-          case "/":
-            result = divide(firstNumber, secondNumber);
-            if (result === null) return; // divide by 0 ignore
+        switch(operator){
+          case "+": result = add(firstNumber,secondNumber); break;
+          case "-": result = subtract(firstNumber,secondNumber); break;
+          case "*": result = multiply(firstNumber,secondNumber); break;
+          case "/": 
+            result = divide(firstNumber,secondNumber);
+            if(result===null) return;
             break;
         }
 
@@ -88,18 +86,22 @@ buttons.forEach(btn => {
         operator = null;
         break;
 
-      default: // numbers
-        if (shouldReset) {
-          display.value = value;
+      case "←":
+        display.value = display.value.slice(0,-1);
+        break;
+
+      default: 
+        if(button === "." && display.value.includes(".")) return; 
+        if(shouldReset){
+          display.value = button;
           shouldReset = false;
         } else {
-          display.value += value;
+          display.value += button;
         }
+        break;
     }
   });
-});
-
-    
+});  
   </script>
 </body>
 </html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="todo.css" />
+  </head>
+  <body>
+    <div class="todo-app">
+      <h2>My Tasks</h2>
+
+      <div class="add-task">
+        <input type="text" placeholder="Enter task..." required />
+        <input type="date" required />
+        <button id="add-btn">Add</button>
+      </div>
+
+     
+      <div class="task-section">
+        <h3>Pending</h3>
+   
+        <ul class="task-list pending">
+
+        </ul>
+      </div>
+
+   
+      <div class="task-section">
+        <h3>Completed</h3>
+
+        <ul class="task-list completed">
+      
+        </ul>
+      </div>
+    </div>
+    <!-- <script src="task.js"></script> -->
+    <script>
+        let tasks;
+       function loadTasks() {
+      tasks=  JSON.parse(localStorage.getItem("tasks")) || [];
+        console.log("tasks", tasks);
+
+      tasks.forEach((item) => {
+        let list = document.createElement("li");
+        list.innerHTML = `
+         <div class="left">
+            <input type="checkbox" class="task-checkbox" ${item.completed ? "checked" : ""} />
+            <span class="task-text">${item.title}</span>
+          </div>
+
+          <div class="right">
+            <span class="due-date">Due: ${item.dueDate}</span>
+            <button class="delete-btn">✕</button>
+          </div>
+         `;
+        if (item.completed == false) {
+          list.classList.add("task-item");
+          document.querySelector(".pending").appendChild(list);
+        } else {
+          list.classList.add("task-item", "done");
+          document.querySelector(".completed").appendChild(list);
+        }
+      });
+
+       }
+         loadTasks();
+
+
+
+
+ let deleteBtn = document.querySelectorAll('.delete-btn');
+       deleteBtn.forEach(btn => {
+       btn.addEventListener('click', function(e) {
+           let li = e.target.parentElement.parentElement;     
+           let spanText = li.children[0].children[1].innerText;
+            li.remove();
+              
+          //  console.log("tasks1", tasks);
+        
+        for (let i = 0; i < tasks.length; i++) {
+         if (tasks[i].title === spanText) {
+             tasks.splice(i, 1); 
+              break; 
+              }
+            }
+            
+        //  console.log("tasks2", tasks);
+         localStorage.setItem("tasks", JSON.stringify(tasks));
+      
+  });
+});
+
+
+// ADD task
+   document.getElementById('add-btn').addEventListener('click', function() {
+
+ 
+     let inputs = document.querySelectorAll(".add-task input");
+let task = inputs[0];
+let date = inputs[1];
+           if (!task.value.trim()) {
+    alert("Please enter a task title");
+    return;
+  }
+  if (!date.value) {
+    alert("Please select a due date");
+    return;
+  }
+       console.log(date.value)
+       let newTask = {
+           title: task.value,
+           dueDate: date.value,
+           completed: false
+       };
+  
+       
+       tasks.push(newTask);
+       localStorage.setItem("tasks", JSON.stringify(tasks));
+       
+       let list = document.createElement("li");
+        list.innerHTML = `
+         <div class="left">
+            <input type="checkbox" class="task-checkbox" />
+            <span class="task-text">${newTask.title}</span>
+          </div>
+
+          <div class="right">
+            <span class="due-date">Due: ${newTask.dueDate}</span>
+            <button class="delete-btn">✕</button>
+          </div>
+         `;
+        list.classList.add("task-item");
+        document.querySelector(".pending").appendChild(list);
+        
+        task.value = '';
+        date.value = '';
+         location.reload();
+        });
+
+
+
+document.querySelectorAll("input[type=checkbox]").forEach(checkbox => {
+  checkbox.addEventListener("change", function(e) {
+    let li = e.target.closest("li");
+    let spanText = li.querySelector(".task-text").innerText;
+   for (let i = 0; i < tasks.length; i++) {
+  if (tasks[i].title === spanText) {
+    tasks[i].completed = e.target.checked; 
+    break
+     }
+      }
+
+     li.remove();
+ 
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+   
+     location.reload();
+    //  loadTasks() 
+  });
+
+});
+
+
+    </script>
+  </body>
+</html>

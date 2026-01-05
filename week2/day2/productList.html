@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product List</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+
+      }
+     
+
+      h1 {
+        text-align: center;
+        margin: 20px 0;
+        color: #333;
+      }
+
+      .product-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* align-items: center; */
+        gap: 20px;
+        padding: 20px;
+        /* margin: auto; */
+      }
+
+      .product-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        text-align: center;
+        padding: 15px;
+        transition: transform 0.1s;
+      }
+
+      .product-card:hover {
+        transform: scale(1.05);
+      }
+
+      .product-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .product-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px 0 5px 0;
+        color: #696969;
+      }
+
+      .product-category {
+        font-size: 14px;
+        color: #616161;
+        margin-bottom: 5px;
+      }
+
+      .product-price {
+        font-size: 16px;
+        color: #e91e63;
+        font-weight: bold;
+      }
+
+     .light{
+      background-color: #ffffff;
+      color: black;
+     }
+
+     .dark{
+      background-color: #000000;
+      color: rgb(255, 247, 247);
+     }
+     section{
+       /* border: 4px solid red; */
+       height: 100vh;
+     }
+     .grey{
+      background-color: rgb(65, 63, 63);
+      color: white;
+     }
+   .controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+        flex-wrap: wrap;
+
+  gap: 15px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  
+  padding: 12px 20px;
+  background-color: #615f5f;
+  border-bottom: 3px solid #757575;
+
+  z-index: 1000;
+}
+
+    </style>
+  </head>
+  <body>
+ <section  class="section">
+
+  <h1>Our Products</h1>
+
+  <div class="controls">
+        <button id="toggleBtn">Theme changer</button>
+    <label for="sorthandler">sort</label>
+    <select id="sorthandler" name="sort">
+      <option value="increasing">sort by low to high</option>
+      <option value="decreasing" selected>sort by high to low</option>
+    </select>
+    <label for="filter">Filter by Category</label>
+    <select id="filter">
+      <option value="all">All</option>
+      <option value="Category A">Category A</option>
+      <option value="Category B">Category B</option>
+      <option value="Category C">Category C</option>
+    </select>
+    <button id="listView">list view</button>
+    <button id="gridView">grid view</button>
+    <input type="text" id="searching" placeholder="Search products" />
+  </div>
+
+
+     <div class="product-container">
+  <!-- Existing products -->
+  <div class="product-card">
+    <img src="https://images.pexels.com/photos/5586315/pexels-photo-5586315.jpeg" alt="Product 1" />
+    <div class="product-name">Smartphone</div>
+    <div class="product-category">Category A</div>
+    <div class="product-price">$200</div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://images.pexels.com/photos/6976094/pexels-photo-6976094.jpeg" alt="Product 2" />
+    <div class="product-name">T-Shirt</div>
+    <div class="product-category">Category B</div>
+    <div class="product-price">$35</div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://images.pexels.com/photos/6769371/pexels-photo-6769371.jpeg" alt="Product 3" />
+    <div class="product-name">Headphones</div>
+    <div class="product-category">Category A</div>
+    <div class="product-price">$150</div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://images.pexels.com/photos/33154633/pexels-photo-33154633.jpeg" alt="Product 4" />
+    <div class="product-name">Sofa</div>
+    <div class="product-category">Category C</div>
+    <div class="product-price">$500</div>
+  </div>
+
+  <!-- New dummy products -->
+  <div class="product-card">
+    <img src="https://images.pexels.com/photos/5077046/pexels-photo-5077046.jpeg" alt="Product 5" />
+    <div class="product-name">Laptop</div>
+    <div class="product-category">Category A</div>
+    <div class="product-price">$800</div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg" alt="Product 6" />
+    <div class="product-name">Jeans</div>
+    <div class="product-category">Category B</div>
+    <div class="product-price">$45</div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg" alt="Product 7" />
+    <div class="product-name">Dining Table</div>
+    <div class="product-category">Category C</div>
+    <div class="product-price">$300</div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://images.pexels.com/photos/4042806/pexels-photo-4042806.jpeg" alt="Product 8" />
+    <div class="product-name">Smartwatch</div>
+    <div class="product-category">Category A</div>
+    <div class="product-price">$120</div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg" alt="Product 9" />
+    <div class="product-name">Jacket</div>
+    <div class="product-category">Category B</div>
+    <div class="product-price">$70</div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://images.pexels.com/photos/276534/pexels-photo-276534.jpeg" alt="Product 10" />
+    <div class="product-name">Bookshelf</div>
+    <div class="product-category">Category C</div>
+    <div class="product-price">$150</div>
+  </div>
+</div>
+    <!-- <button id="sorthandler">Sort by Price</button> -->
+ </section>
+
+    <script>
+      let products = document.querySelectorAll(".product-card");
+      let productArray = [];
+   let sorthandler = document.getElementById("sorthandler");
+      for (let i = 0; i < products.length; i++) {
+        let obj = {
+          img: products[i].querySelector("img").src,
+          name: products[i].querySelector(".product-name").innerText,
+          category: products[i].querySelector(".product-category").innerText,
+          price: Number(
+            products[i]
+              .querySelector(".product-price")
+              .innerText.replace("$", "")
+          ),
+        };
+        productArray.push(obj);
+      }
+
+      // function sortingalgortihm(elements) {
+      //   for (let i = 0; i < elements.length; i++) {
+      //     for (let j = i + 1; j < elements.length; j++) {
+      //       if (  elements[i].price > elements[j].price && sorthandler.value === "increasing"
+      //       ) {
+      //         let temp = elements[i];
+      //         elements[i] = elements[j];
+      //         elements[j] = temp;
+      //       } else if (
+      //      elements[i].price < elements[j].price &&sorthandler.value === "decreasing"
+      //       ) {
+      //         let temp = elements[i];
+      //         elements[i] = elements[j];
+      //         elements[j] = temp;
+      //       }
+      //     }
+      //   }
+      //   return elements;
+      // }
+function sortingalgortihm(elements) {
+  return elements.sort((a, b) => {
+    if (sorthandler.value === "increasing") {
+      return a.price - b.price; 
+    } else if (sorthandler.value === "decreasing") {
+      return b.price - a.price; 
+    }
+  });
+}
+     
+      sorthandler.addEventListener("change", function () {
+        renderProducts(sortingalgortihm(visibleProducts));
+      });
+
+      // list-to-gird-view
+      let listView = document.getElementById("listView");
+      let gridView = document.getElementById("gridView");
+      listView.addEventListener("click", function () {
+      const productContainer = document.querySelector(".product-container");
+        productContainer.style.flexDirection ="column";
+  
+        productContainer.style.alignItems= "center";
+     
+          document.querySelector(".product-container").children.style.flexDirection="";
+      });
+      gridView.addEventListener("click", function () {
+        document.querySelector(".product-container").style.flexDirection ="row";
+      });
+      
+
+      function renderProducts(arr) {
+        const productContainer = document.querySelector(".product-container");
+        productContainer.innerHTML = "";
+         let arrLength=arr.length;
+         if(arrLength===0){
+          productContainer.innerHTML=`<h2>No products found</h2>`
+         }
+        arr.forEach((item) => {
+          productContainer.innerHTML += `
+      <div class="product-card">
+        <img src="${item.img}">
+        <div class="product-name">${item.name}</div>
+        <div class="product-category">${item.category}</div>
+        <div class="product-price"> $ ${item.price}</div>
+      </div>
+    `;
+        });
+      }
+
+      // filter
+
+      let allProducts = [...productArray];
+      let visibleProducts = [...allProducts];
+      let filter = document.getElementById("filter");
+      filter.addEventListener("change", function (e) {
+        const value = e.target.value;
+
+        if (value === "all") {
+          visibleProducts = [...allProducts];
+        } else {
+          visibleProducts = allProducts.filter(
+            (item) => item.category === value
+          );
+          console.log(visibleProducts);
+        }
+
+        renderProducts(sortingalgortihm(visibleProducts));
+      });
+
+      let input = document.getElementById("searching");
+      input.addEventListener("change", function (e) {
+        let val = e.target.value;
+        let selectedProducts = [];
+        console.log(productArray);
+        productArray.forEach((item) => {
+          let st = item.name.toLowerCase();
+          val = val.toLowerCase();
+          if (st.includes(val)) {
+            selectedProducts.push(item);
+          }
+        });
+        renderProducts(selectedProducts);
+      });
+
+
+      // toggle
+
+       localStorage.setItem("mode","light")
+
+    
+   
+      let productCard = document.querySelectorAll(".product-card")
+      let productContainer = document.querySelector(".product-container")
+      let section = document.querySelector(".section")
+    
+      document.querySelector("#toggleBtn").addEventListener("click",()=>{
+           if(localStorage.getItem('mode')=== "light" ){
+              localStorage.setItem("mode","dark")
+               productContainer.classList.add("dark")
+            section.classList.add("dark")
+             productCard.forEach((item)=>{
+                item.classList.add("grey")
+             })
+           }else{
+             localStorage.setItem("mode","light")    
+            productContainer.classList.remove("dark")
+            section.classList.remove("dark")
+             productCard.forEach((item)=>{
+                item.classList.remove("grey")
+             })    
+           }
+      })
+
+      
+    
+
+       
+    </script>
+  </body>
+</html>

@@ -86,7 +86,8 @@
         id="email"
         name="email"
         required
-        pattern="[a-z0-9]+@[a-z0-9.-]+\.[a-z]{2,}$"
+       pattern="^[a-z0-9]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+        
         title="Enter a valid email address (example: user@gmail.com)"
       />
       <label for="phone">Phone Number</label>
@@ -97,7 +98,7 @@
         name="phone"
         required
         placeholder="Enter your phone no"
-        pattern="[6-9][0-9]{9}"
+       pattern="/+91+[0-9]{13,}"
         title="Enter a valid 10-digit Indian phone number"
       />
 

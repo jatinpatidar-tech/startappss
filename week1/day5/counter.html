@@ -11,25 +11,45 @@
 <h1 id="number">0</h1>
 </body>
 <script>
-
+  ((count)=>{
+        count=0; 
+        console.log(count);
+    }
+  )();
      function counter (){
         let count=0;
       return {
         inc:function (){
-            count++;
-            return count;
+           
+    
+            if(count>=10){
+
+                alert("maximum limit reached");
+                return count;
+            }else{
+                  count++;
+                return count;
+            }
         },
         dec:function (){
-            count--;
+          
+            if(count<=0){       
+               
+             alert("minimum limit reached");
+             return count;
+        }else{
+             count--;
             return count;
         }
+    }
       }
-
      }
-     let button1=document.getElementById('increment')
+
+
+     let button1=document.querySelector('button')
      let button2=document.getElementById('decrement')
      let numberbtn=document.getElementById('number')
-        let counterfun=counter();
+     let counterfun=counter();
     button1.addEventListener('click',()=>{
         
         numberbtn.innerText=counterfun.inc();

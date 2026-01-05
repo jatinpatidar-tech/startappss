@@ -37,14 +37,13 @@
   border-radius: 50px;
 }
 
-/* ✅ Mobile Fix */
+
 @media (max-width: 768px){
   .container7-row1{
     flex-direction: column;
     gap: 2rem;
   }
 
-  /* ✅ SAME CLASS NAME */
 
 }
 @media (min-width: 768px){

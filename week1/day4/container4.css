@@ -69,7 +69,7 @@ body {
   color: #333;
 }
 
-/* ✅ Responsive */
+
 @media (max-width: 768px) {
   .info-section {
     flex-direction: column;

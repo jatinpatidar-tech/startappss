@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif
+}
+body{
+  background:#f5eee6;
+  color:#3e2c23
+}
+nav{
+  background:#5a3e2b;
+  padding:15px 30px;
+  display:flex;
+   /* border:2px solid #ef1717; */
+
+  justify-content:space-between;
+  align-items:center
+}
+nav h1{
+  color:#fff;
+  font-size:22px
+}
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:20px
+}
+nav ul li a{
+  color:#fff;
+  text-decoration:none
+}
+section{
+  max-width:500px;
+  margin:60px auto;
+  background:#fff;
+  padding:30px;
+   /* border:2px solid #ef1717; */
+  border-radius:8px
+}
+section h2{
+  text-align:center;
+  margin-bottom:20px;
+  color:#5a3e2b
+  
+}
+input,textarea{
+  width:100%;
+  padding:10px;
+  margin-bottom:15px;
+  border:1px solid #b9a89a;
+  border-radius:4px
+}
+button{
+  width:100%;
+  padding:10px;
+  background:#5a3e2b;
+  color:#fff;
+  border:none;
+   /* border:2px solid #ef1717; */
+ 
+  border-radius:4px;
+  cursor:pointer
+}
+footer{
+  background:#5a3e2b;
+  color:#fff;
+  text-align:center;
+  padding:12px;
+  margin-top:40px
+}
+</style>
+</head>
+<body>
+
+  
+  <nav class="navbar">
+    <h1 class="logo">Filmography</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="filmography.html">Filmography</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+
+<section>
+  <h2>Contact Us</h2>
+  <form>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea rows="5" placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>2025 Filmography</p>
+</footer>
+
+</body>
+</html>

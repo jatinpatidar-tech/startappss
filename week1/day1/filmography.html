@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif
+}
+body{
+  background:#f5eee6;
+  color:#3e2c23
+}
+nav{
+  background:#5a3e2b;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center
+}
+nav h1{
+  color:#fff;
+  font-size:22px
+}
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:20px
+}
+nav ul li a{
+  color:#fff;
+  text-decoration:none
+}
+.container{
+  max-width:1000px;
+  margin:50px auto;
+  padding:20px
+}
+section h2{
+  text-align:center;
+  margin-bottom:30px;
+  color:#5a3e2b
+  
+}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px
+}
+.card{
+  background:#fff;
+  border-radius:8px;
+  /* border: 3px solid #ddd; */
+  overflow:hidden;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+  transition:transform 0.3s ease
+}
+.card:hover{
+  /* transform:translateY(-10px); */
+  transform: scale(1.2);
+}
+.card img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  /* border: 3px solid #ddd; */
+
+  object-position:center;
+  display:block
+}
+.card .info{
+  padding:15px
+}
+.card h3{
+  margin-bottom:8px;
+  font-size:18px
+}
+.card p{
+  font-size:14px
+}
+footer{
+  background:#5a3e2b;
+  color:#fff;
+  /* border: 3px solid #ddd; */
+
+  text-align:center;
+  padding:12px;
+  margin-top:40px
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <h1>Filmography</h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="filmography.html">Filmography</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <h2>Our Filmography</h2>
+
+  <div class="cards">
+    <div class="card">
+      <img src="image4.jpg" alt="">
+      <div class="info">
+        <h3>Film One</h3>
+        <p>Drama | 2022</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="image3.jpg" alt="">
+      <div class="info">
+        <h3>Film Two</h3>
+        <p>Action | 2023</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="image2.jpg" alt="">
+      <div class="info">
+        <h3>Film Three</h3>
+        <p>Romance | 2024</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images1.jpg" alt="">
+      <div class="info">
+        <h3>Film Four</h3>
+        <p>Thriller | 2025</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p> 2025 Filmography</p>
+</footer>
+
+</body>
+</html>

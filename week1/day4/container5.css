@@ -21,7 +21,7 @@
 
 
 .left {
-  /* border: 4px solid #10e76a; */
+  /* border: 4px solid #025c27; */
  display: flex;
   flex-direction: row;
   width: 50%;
@@ -87,7 +87,7 @@ form button {
 
 
 .right {
-  /* border: 4px solid #ffcc00; */
+  border: 4px solid #ffd52e;
   width: 45%;
   /* height: 100%; */
 }
@@ -123,5 +123,4 @@ form button {
     margin-top: 2rem;
   }
 }
-
 

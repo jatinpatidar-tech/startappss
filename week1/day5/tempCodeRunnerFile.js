@@ -1,2 +1,5 @@
-6Z
-// console.log(mydate.toDateString()); // 2024-06-12 10:20:30.456Z
+let arr3=arr;
+// console.log(arr3);
+// arr3.push(100);
+// console.log(arr3);
+// console.log(arr);

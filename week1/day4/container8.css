@@ -71,7 +71,7 @@
   color: white;
 }
 
-/* responsive */
+
 @media (max-width: 768px){
   .container8-grid{
     grid-template-columns: 1fr;
