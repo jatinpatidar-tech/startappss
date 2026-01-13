@@ -1,0 +1,23 @@
+.suggestions {
+  list-style: none;
+  margin-top: 5px;
+  padding: 0;
+  border: 1px solid #ccc;
+  background: #fff;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.suggestions li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestions li:hover {
+  background: #f0f0f0;
+}
+.weather-info div {
+  margin-top: 30px;
+  text-align: center;
+  color: white;
+}
